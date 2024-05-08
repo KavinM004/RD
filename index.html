@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sidebar</title>
+    <script src="./tailwindcss.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+</head>
+<body style="background-color:whitesmoke;">
+    <div class="flex w-screen h-screen">
+        <div class="w-[300px]  duration-300 overflow-hidden bg-gray-900 h-auto "
+         id="sidebar">
+            <div class="text-2xl border-b-[1px] border-gray-700 px-4 py-3 flex flex-row">
+                <img title="Logo" src="https://www.freepnglogos.com/uploads/circle-png/red-circle-fox-tail-transparent-images-5.png" class="w-8 h-8">
+                <div class="mx-3 font-mono text-[white]"> BangoDash</div>
+            </div>
+            <div class="border border-gray-700 my-1">
+                <p class="flex items-center text-sm gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-3 py-3">
+                    MAIN NAVIGATION
+                </p>
+            </div>
+            <div class="flex flex-col font-sans text-lg border border-gray-700">
+                <div class="relative ">
+                    <button id="dashboardDropdown" class="flex items-center gap-3 w-full font-semibold text-gray-500 hover:text-[white] hover:bg-gray-600 px-5 py-3">
+                        <i class="fa-solid fa-house text-[#828d8f] hover:text-[#fec742]" title="Dashboard"></i>
+                        Dashboard
+                        <ion-icon id="dropdownIcon" name="arrow-dropdown" class="flex flex-row"></ion-icon>
+                        
+                    </button>
+                    <div id="dropdownMenu" class="flex flex-col gap-3 font-semibold  py-3 hidden">
+                        <button id="dashboardDropdown" class="flex items-center gap-3 w-full font-semibold text-gray-500 hover:text-[white] hover:bg-gray-600 px-5 py-3">
+                            <i class="fa-regular fa-circle-dot text-[#828d8f] hover:text-[#fec742]" title="Dashboard"></i>
+                            Dashboard v1
+                        </button>
+                        <button id="dashboardDropdown" class="flex items-center gap-3 w-full font-semibold text-gray-500 hover:text-[white] hover:bg-gray-600 px-5 py-3">
+                            <i class="fa-regular fa-circle-dot text-[#828d8f] hover:text-[#fec742]" title="Dashboard"></i>
+                            Dashboard v2
+                        </button>
+                        <button id="dashboardDropdown" class="flex items-center gap-3 w-full font-semibold text-gray-500 hover:text-[white] hover:bg-gray-600 px-5 py-3">
+                            <i class="fa-regular fa-circle-dot text-[#828d8f] hover:text-[#fec742]" title="Dashboard"></i>
+                            Dashboard v3
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border font-sans text-lg border-gray-700 my-1">
+                <button  class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-6 py-3">
+                    <i class="fa-brands fa-uikit text-[#828d8f] hover:text-[#fec742]" title="UI Elements"></i>
+                    UI Elements
+                    <ion-icon id="dropdownIcon" name="arrow-dropdown" class="flex flex-row"></ion-icon>
+                </button>
+            </div>
+            <div class="border border-gray-700 font-sans text-lg my-1">
+                <p class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-3 py-3">
+                    <a href=""></a>
+                    <i class="fa-regular fa-calendar text-[#828d8f] hover:text-[#fec742]" title="Calendar"></i>Calendar
+                </p>
+            </div>
+            <div class="border border-gray-700 font-sans text-lg my-1">
+                <p class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-3 py-3">
+                    <a href=""></a>
+                    <i class="fa-regular fa-calendar text-[#828d8f] hover:text-[#fec742]" title="Mailbox"></i>Mailbox
+                </p>
+            </div>
+            <div class="border border-gray-700 font-sans text-lg my-1">
+                <button  class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-6 py-3">
+                    <i class="fa-brands fa-slack text-[#828d8f] hover:text-[#fec742]" title="Components"></i>
+                    Components
+                    <ion-icon id="dropdownIcon" name="arrow-dropdown" class="flex flex-row"></ion-icon>
+                </button>
+            </div>
+            <div class="border border-gray-700 font-sans text-lg my-1">
+                <button  class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-6 py-3">
+                    <i class="fa-brands fa-wpforms text-[#828d8f] hover:text-[#fec742]" title="Forms"></i>
+                    Forms
+                    <ion-icon id="dropdownIcon" name="arrow-dropdown" class="flex flex-row"></ion-icon>
+                </button>
+            </div>
+            <div class="border border-gray-700 font-sans text-lg my-1">
+                <button  class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-6 py-3">
+                    <i class="fa-solid fa-icons text-[#828d8f] hover:text-[#fec742]" title="UI Icons"></i>
+                    UI Icons
+                    <ion-icon id="dropdownIcon" name="arrow-dropdown" class="flex flex-row"></ion-icon>
+                </button>
+            </div>
+            <div class="border border-gray-700 font-sans text-lg my-1">
+                <button  class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-6 py-3">
+                    <i class="fa-brands fa-weebly text-[#828d8f] hover:text-[#fec742]" title="Widgets"></i>
+                    Widgets
+                    <ion-icon id="dropdownIcon" name="arrow-dropdown" class="flex flex-row"></ion-icon>
+                </button>
+            </div>
+            <div class="border border-gray-700 font-sans text-lg my-1">
+                <button  class="flex items-center gap-3  w-full font-semibold text-gray-500 hover:text-white hover:bg-gray-600 px-6 py-3">
+                    <i class="fa-solid fa-table text-[#828d8f] hover:text-[#fec742]" title="Tables"></i>
+                    Tables
+                    <ion-icon id="dropdownIcon" name="arrow-dropdown" class="flex flex-row"></ion-icon>
+                </button>
+            </div>
+
+        </div>
+        <div class="grow">
+            <nav class="py-3 flex justify-between border bg-gradient-to-r from-[#f51b60] to-[#fa6407] flex">
+            <div class="flex">
+                <ion-icon name="menu" id="menuToggleBtn" class="text-3xl cursor-pointer px-4 py-1 text-[white]"></ion-icon>
+                <div class="relative">
+                    <input class="w-auto mx-2 rounded-xl h-7 px-2 sm:visible invisible " style="margin-top: 4px;" type="text" placeholder="Enter keywords">
+                    <i class="fa-solid fa-magnifying-glass absolute bottom-3 right-4 min-[640px]:block hidden xs:hidden" style="color:#9b9c9d ;"></i>
+                </div>
+            </div>
+            <div class="flex px-3 gap-3 w-full justify-end">
+                <i class="fa-regular fa-envelope-open py-1   text-[white] text-xl md:block hidden" style="margin-top: 5px;"></i>
+                <i class="fa-regular fa-bell py-1 text-xl  text-[white] md:block hidden" style="margin-top: 5px;"></i>
+                <img class="w-8 h-6 md:block hidden" style="margin-top: 8px; " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACUCAMAAABV5TcGAAAAz1BMVEX////IEC4BIWnFABT57e/agojLytUAAFPGACLICivtxMfx0tUAAGBydZjo6e1napEABmHCAADh4unuysoAG2cAAFsAE2QAHmgAAFfFABkAGGb9+Pnv8PT3+PoAD2PEAA334+TU1t+xtsi+wM59hKWgo7r02tzqtbvNOUjZfIDJJDbqu77PRlQ8SH1JUYPZc34fH2hPWYcpK20tMnDdjY/Wa3IwQHnglpkZLm8tOneSl7LmqK6HjKjTWGVAQnnLMD8AAEc6P27GIiLNSUvRXl9agXisAAAMxUlEQVR4nO2dfUOiShuHUXwBhdQUEzUltRRfolLWViv3nPr+n+mAm8wMcw+DimLPw/3XOZvLjNcazAXO7xYEqPozpX6Tjr4U9Wo3REGSU6ySpeLuZdel8gnmcVNXHnPeuzUsaTcySMOp3ONTvRb5NC4DR63+9Hy3G6BlvFf0FA+H8wl5fOlEDeQScDTLL8/eJ6NlWBiMIByC0CvNy81IpxI/jmZ5XurvDp55yFZEYuQgHFsgSpSfkLhxNJXfas+DUc1KXd/IQiuQx21PfY0QSLw4aspc7d9+H7hVWIy7vinIorAoBANp99W0EtVVJk4cNeVlgMHIbigY3VRW6I74QAaKEs2U4sNxo3UG/fbuqJPsiIYhZyctISXpo2whkIdwlVO1SIDEhkPTBjkPRsEEYEjZQsb5mfPfkjQy+UAaEQCJCYfSUO9wGKJ/aFE3q5ntT7f/K0kbqygEVjtXahw9s1hwKI0SglG1N5LkG06vWMXM98+9GYzth2Agt3fP+c6Pw1HOl+52J1DhwR5Tw0qV9yI6eWJz6L5nhODKzY4DcnYcnfyjtxwXDFsHYEyJTwH5M5sL5JfWPPyye14cN3VthsOo+H9LXBi+cwT5c7FiGRwg/V+dg233nDhu6vUZstaMTbjJ31F0PwxB8E+qK2YfgtchQm/2dKDcnQ9HrfM089ykZZg+N9meLN+By+lG91+CK9KCC+RA2z0Xjlpn/uy5ScsRNb+bODC+htA7G34BQORlkQek9FLeH8h5cNQca0UwigtK1GR9Yw8Zb7C1tsf+dYlcSS2rPLkrvewtd+fAUVNe1Z7nJlVI1MYmC4ZbmaEFANnwgLR7am1PuTs9jhslrfZ2iy7HWiFRC4SxBTIxZRrIaMmRu6ueup/cnRyHUleRqBUWo67v2rqFwVtMbIFYuv/kK4mO7Qb/tav+XnJ3YhyKpvbRANmRf6Ehi5I5CYbhXZozBYu6NDtyl+W4zFW/FF7uTorDEbWcd/hqdiT6V12ibhV4n4wP1Vu4ZYrvEBCTByS83J0QhyNqCEbRHAGiZvNg5EpCsz5Xrz0g1XdqJSvJG9sIPkw799wI5TInw1FuPKP7GQ/mRqbehSNqHBh3pXlHSKeb9ScEpFWdUkBk6V+ey9z2Z416bDgcUct51mpYMiRqvIXUdemp3kwL7uFqHUX12AoF6hTk2q7F+63rvza4TyFOgqOe/425iVUBYGw4v+/Clap03DWD8PeQN1oeB/IpytQNo0oIIArHdqPHcdNUMBgtG3CT7ohzeXRg5L8XUIJ3YC0/aHufuOEn/Ylz5M7gLd3nT4G2GzWOWv1pjkQt43+I5B5Jmk6C53x7NchruwMK2MG1/OoKA0LdOHLkbnmc3EWLo9Z5eURuYizCixoO4w3BIHE4QDqraw/I+mtMy12KB+T2/pkNJEoctfILbq1LRzx9R9HHTFHbTfZ6pWj4QQXfGNrryru16ModDWTMs932fSldhn9losNRU15KSNSKyw0FQ0zZaw6Mu1VaIycq+Mdpar8QkMzaTtFANmsOkKteCZa7qHA4olZColZdjg6BkVv91vzXQgqHc+HSPlZo6T60ZWql6sgdb6XaK0FyFxEOpaP20IGWgJvI1pq3Al19UDBAHC6Q2ZsHxJjYOgVEnPKAXPdLtNxFgoMQteoCEjWLZ625t5kCLRtBHA4QZfbmuYxRoO+7OhewRQggvvcSAQ5FKyEYxcWUEjVdtycGB8bgA4TBxLEFMsCAAC4jfWY5D6qu+j6XORpHuYHDyE4BUXvnidodE0YADgdI/WPAkbtP3mOIdv8RB3Ikjk7juY+JGm2tjqhVeTDUjw7brgJwOFeZ5nzgzT9ToOVOksa8pftt/xdymaNw1BuzPhI1cwxY64grauq8HmRWgTjchV994P17tCYbyHazPJfppRu1o3E082g5LrRM6PHimOcm7UGT83VIDg73Et8YeP8mwpBa7jgn8i4fiKLVjsJR02oIhkDftnOtlQ+jwb3TzcWRdl3mDQci+W1XrnQXXCAvdcd2D8Nx06ynveW4AIvaJ8dNHBh5jf9Ww+BwgDRWyHbXnylI7ni2e//xVD8Eh1J/+sBEbSlWqFenPnlu0n4LAyMsjvSN1rzH5G4K2O54zZe7cml/HPXnewxGiha11BdvOe4XtaNxbOUOAWmBtssF0l6t9saxuvcGfVjTohYGxn1aC/u4MDSOrdzdo7vuoNyNeHJ3633CQuJAf6G4BpbjIaz1nha1SHBsXQYBMdaQ3E3XvNuS++HwYCypVY8jajZP1O4cUQtxS/swHC6QxxUCMrRFCojOlbsDcAAwUrpkD43gMXKrR+ZynIEjv2f9+fPPwFsCGJP3Cl2fWc6z3f1wuN8QpgfpcmH0B//82ffdCbn9q3+NxjSqUPEuunvhYI3BG+G6v/9b4077VLXnueN/vRIcRCU4iEpwEJXgICrBQVSCg6gLxZGJqSaBOAoxzUrIxlQ2m4bDw4ppVoIYU1F3O4nSY5qVEDir/7tKcBCV4CAqwUFUgoOoBAdRCQ6iEhxEJTiISnAQleAgKsFBVIKDqAQHUQkOohIcRCU4iEpwEJXgICrBQVSCg6gEB1EJDqISHEQlOIhKcBCVPJQkKnlkTVTyhQai4vpayaV+3SWuSnAQleAgKsFBVIKDqAQHUQkOoi4Ux5Hbe+AKsSHnWBwto8AZ46DtPQds/nrrMyf5F8bwvQtsCSN7ORyNo2ACW8IqWHbHQZu/jtgayICxtiV6B+W7f8NgBL8sxSUYZoL2yB2wNXA/GNjGUSYM2b+/FtxOGsW5o1UEQpD0FLad9IQbR4ltxXBlll/UZmMCxhHbihlA1mMoL8wDcqptxcSmc8bcABjuzmtvK/pxm85ZQJYQELQV/fb6/jXqTedkJAE8rzUEY7z2NpEeH0nAGPgBCipwgOxeEHkkARFYwYABhDZWpGXGu5pEEljBGNxYShQQN8bCAxJlYAURZwLX8FOiYVSW6HZKdHEmcBlQUr70idIoI4ozIcNuGDDoCJyUXsmiF0QcdgNWxqQjcJwzF4rAiSDshohCgqs1GQMBSToOI/IoJAYQSwQCkkZo9XdkFBIRlMWAQUcBO+eQMQpHOlFQFgOIDcVnTVGW2BFBWUSMGmN4KEtMHmUN79/jdDFqcD1YYAo2AnJgjBoRsgeXG1dBB6tNF1703olD9uAqmp9QRjoGZP+QvVAwwDATFMx4hghGBhAwixBL0N8zgpEI6GTAGEKihiW7nCmgE64qlFQpWai/wh4BnUR8K1wZR9T8HTsIGGeMbwWLkXCL5ZiGjG8lwn2ZMFI0jBEB44zhvkwgtMuIWBh0mHBfIvqZMQ4Aw21u40VknT/6mTFRSO4cIMhleNHPRDA4AwYYoIbiwuMJBmcCgeLCUXZ6YDA4ERvPhEG7iY7lDcYWG8+Y8MNCp+UOB8KKjSeaCsAFiVq3skDWGmtTAQYQUO5kJHduUwHvrA+2nICrMKKVQKyY6H5w/C0n4DIsINJTnFa9F/haTpANSRgwoCTbioXDuISGJHBlbKhNCdZCEWtIQrSrgatVhXq2/GtionYx7WrgMt7/DW69+t2uhmhmxGALdPSR5I1p7F5wYc2M4HoAbRdrcbRtZoS1umLAKIANsFBG+gW2uoKL0QALAcmVBN5yvACKGmqPdqGN0OAqAEDEisXLVvdgTCwJcJOFd1K+4DZ5YLUKUL84yeT2ixO2vSYBUcM6CV54E0UGkAUkd7xugo6omSl/f0pX1LxPxuW32GQCoV2mG9yFlCtqP6MBKxMI/aBK3FisrPXWEG5jhJKuf0x7XsYbLC4AudvYMAxA1Loi1tL5RzVvZgHJ6lSvWgl44eSLSsl3rkZYT7gf19qbAeSBbvhNvagwpZtbEB0Df2bjd7gMf1si38+LtJu4CzcEI/dL41jrpeBwgWgzzpLbcRniDfNgOCaMdejJzfKh3OQycKS3cscH0kVTQX/cKtIPkWR5bHlucnv3fByMGHA4cpcvcW7+CkXbu3Ls/ihThbp7bVCn4nZ4UbsoHFu5u+PYbtXe/HWZbxgFS6Qae+sjE7lJTg0vaheGYyt3PCDfcvcXhkmLWneURW6S20vUAuYVD450WtMGnPshrYk5EmXXWk2ZcpMuJmrt/mA/UWNXbDjSN1pnwJO7yWIjDGlRk0kYanpPUWNXfDi2D6oGnO+HtCbCmIJR2SyqSNTU171FjV1x4nCBzFXeF2YoGPKiiInaPEIYceNIp5vKbzXYZciJdPUsbq3zcvgv7IapuHE4QBzbDXIZfBqEqPUPtNagih+HC+Tlme0yaBKum3gwco9PnC/ZHVKXgGP7KPOZtXT35iDh1jpTDrbWoLoMHK7cKY/gJ+Q/KAwkbpEe7WEAAAAASUVORK5CYII=" alt="">
+                <img class="w-10 h-10  rounded-full" src="data:image/jpeg;base64,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" alt="">
+            </div>
+                
+            
+            
+            </nav>
+            <div class="flex flex-wrap justify-evenly">
+                <div class="w-full h-24 sm:flex-col md:w-full lg:w-1/5 bg-gray-200 rounded p-4 ml-3 mt-8 bg-gradient-to-r from-[#24cfdd] to-[#597de6]">
+                    <div class="text-xl font-bold text-[white] pl-2">2050</div>
+                    <div class="font-semibold text-[white] pl-2">Total Orders</div>
+                    <div class="relative"><ion-icon name="cart-outline" class="absolute right-4 bottom-0 text-5xl text-[white]"></ion-icon></div>
+                </div>
+                <div class="w-full h-24 sm:flex-col md:w-full lg:w-1/5 bg-gray-200 rounded p-4 ml-5 mt-8 bg-gradient-to-r from-[#f45298] to-[#fe727b]">
+                    <div class="text-xl font-bold text-[white] pl-2">3250</div>
+                    <div class="font-semibold text-[white] pl-2">Total Expenses</div>
+                    <div class="relative"><ion-icon name="wallet-outline" class="absolute right-4 bottom-0 text-5xl text-[white]"></ion-icon></div>
+                </div>
+                <div class="w-full h-24 sm:flex-col md:w-full lg:w-1/5 bg-gray-200 rounded p-4 ml-5 mt-8 bg-gradient-to-r from-[#3bdf98] to-[#3eb6b2]">
+                    <div class="text-xl font-bold text-[white] pl-2">87.5%</div>
+                    <div class="font-semibold text-[white] pl-2">Total Revenue</div>
+                    <div class="relative"><ion-icon name="pie-chart-outline" class="absolute right-4 bottom-0 text-5xl text-[white]"></ion-icon></div>
+                </div>
+                <div class="w-full h-24 sm:flex-col md:w-full lg:w-1/5 bg-gray-200 rounded p-4 ml-5 mt-8 bg-gradient-to-r from-[#fed542] to-[#fd8b50]">
+                    <div class="text-xl font-bold text-[white] pl-2">2550</div>
+                    <div class="font-semibold text-[white] pl-2">New Users</div>
+                    <div class="relative"><ion-icon name="person-outline" class="absolute right-4 bottom-0 text-5xl text-[white]"></ion-icon></div>
+                </div>
+              </div>  
+              <div class="grid md:grid-cols-8 gap-8 pt-8 justify-center">
+                <div class="md:col-span-4  bg-[#fefefe] shawdow-xl hover:shadow-lg rounded min-h-[500px]  sm:ml-12">
+                    <h6 class="relative font-semibold mt-2 ml-4 mb-2 font-sans text-lg text-[black]">
+                        Product Sales
+                        <ion-icon name="ellipsis-horizontal-outline" class="absolute right-4 bottom-1"></ion-icon>
+                    </h6>
+                    <hr class=" border-pink-200">
+                    <div class="mt-16 ml-4 ">
+                        <canvas id="myChart" style="width:100%;max-width:700px" ></canvas>
+                    </div>
+                </div>
+                <div class="md:col-span-4 bg-[#fefefe] shawdow-xl hover:shadow-2xl rounded min-h-[300px] mr-12 ">
+                   <h6 class="relative font-semibold mt-2 ml-4 mb-2 font-sans text-lg text-[black]">
+                    Top Selling Categories
+                    <ion-icon name="ellipsis-horizontal-outline" class="absolute right-4 bottom-1"></ion-icon>
+                </h6>
+                <hr class=" border-pink-200">
+                <div id="chartContainer" style="height: 370px; width: 100%;" class="mt-9"></div>
+
+                </div>
+              </div>                
+
+          </div>     
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script>
+        let toggleButton = document
+        .querySelector('#menuToggleBtn')
+        .addEventListener('click',()=>{
+            let sidebar = document.querySelector('#sidebar');
+            sidebar.classList.toggle('translate-x-[-100%]');
+            sidebar.classList.toggle('w-[0px]');
+        });
+
+        const dropdownButton = document.getElementById('dashboardDropdown');
+    const dropdownIcon = document.getElementById('dropdownIcon');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownButton.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('hidden');
+        if (dropdownMenu.classList.contains('hidden')) {
+            dropdownIcon.setAttribute('name', 'caret-down');
+        } else {
+            dropdownIcon.setAttribute('name', 'caret-up');
+        }
+    });
+    
+    const xValues = [1,2,3,4,5,6,7,8];
+    const yValues = [1,2,3,4,5,6,7,8];
+
+    new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      label: 'Apple',
+      data: [0,60,30,80,35,75,30,0],
+      borderColor: "rgba(218, 107, 165)", // hotpink with 50% opacity
+      fill: true,
+      backgroundColor: "hotpink" // yellow with 30% opacity
+    },{
+      label: 'Samsung',
+      data: [1,30,60,25,60,25,50,0],
+      borderColor: "rgba(0, 0, 255, 0.5)", // blue with 50% opacity
+      fill: true,
+      backgroundColor: "skyblue" // lightblue with 30% opacity
+    }]
+  },
+  options: {
+    legend: { display: true },
+    scales: {
+      yAxes: [{
+        id: 'y-axis-1',
+        type: 'linear',
+        position: 'left',
+        ticks: {
+          min: 0,
+          max: 80,
+          stepSize: 10,
+          fontColor: 'black' // Border color for y-axis with 50% opacity
+        },
+        gridLines: {
+          color: 'rgba(0,0,0,0.5)', // Gridline color for y-axis with 50% opacity
+          zeroLineColor: 'black' // Zero line color for y-axis with 50% opacity
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          fontColor: 'black' // Border color for x-axis with 50% opacity
+        },
+        gridLines: {
+          color: 'rgba(0,0,0,0.5)', // Gridline color for x-axis with 50% opacity
+          zeroLineColor: 'black' // Zero line color for x-axis with 50% opacity
+        }
+      }]
+    }
+  }
+});
+
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    title:{
+        text: ""
+    },legend: {
+        cursor:"pointer",
+        itemclick: toggleDataSeries
+    },  
+    axisX: {
+        title: "",
+        titleFontColor: "#333",
+        labelFontColor: "#333",
+        lineColor: "#333",
+        gridThickness: 1,
+        tickLength: 0
+    },
+    axisY: {
+        title: "",
+        titleFontColor: "#333",
+        labelFontColor: "#333",
+        lineColor: "#333",
+        gridColor: "#ccc",
+        gridThickness: 1,
+        tickLength: 0
+    },
+    toolTip: {
+        shared: true
+    },
+    data: [{
+        type: "column",
+        name: "Laptops",
+        showInLegend: true,
+        color: "#fdad84", // Background color for the first bar representing laptops
+        dataPoints:[
+            { label: "1", y: 40 },
+            { label: "2", y: 30 },
+            { label: "3", y: 60 },
+            { label: "4", y: 35 },
+            { label: "5", y: 60 },
+            { label: "6", y: 25 },
+            { label: "7", y:50},
+            { label: "8", y:40}
+        ]
+    },
+    {
+        type: "column",    
+        name: "Mobiles",
+        showInLegend: true,
+        color: "#ae54b0", // Background color for the second bar representing the laptop
+        dataPoints:[
+            { label: "1", y: 50 },
+            { label: "2", y: 60 },
+            { label: "3", y: 40 },
+            { label: "4", y: 70 },
+            { label: "5", y: 35 },
+            { label: "6", y: 75 },
+            { label: "7", y: 30 },
+            { label: "8", y: 0 }
+        ]
+    }]
+});
+chart.render();
+
+function toggleDataSeries(e) {
+    if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+        e.dataSeries.visible = false;
+    }
+    else {
+        e.dataSeries.visible = true;
+    }
+    chart.render();
+}
+
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
